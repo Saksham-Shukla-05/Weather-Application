@@ -4,7 +4,7 @@ import { FiLoader } from "react-icons/fi";
 import { MdCancel, MdDarkMode, MdDeleteOutline } from "react-icons/md";
 import { RxSun } from "react-icons/rx";
 function App() {
-  const [DarkMode, setDarkMode] = useState(true);
+  const [DarkMode, setDarkMode] = useState(false);
   return (
     <div className={`app ${DarkMode ? "dark-mode" : "light-mode"}`}>
       <NavBar DarkMode={DarkMode} setDarkMode={setDarkMode} />
@@ -43,7 +43,7 @@ function Button({ DarkMode, setDarkMode }) {
 }
 
 function InputFeild({ DarkMode }) {
-  const [City, setCity] = useState("Indore");
+  const [City, setCity] = useState("");
   const [Loading, setIsLoading] = useState(false);
   const [FetchedData, setFetchedData] = useState();
   const [err, setErr] = useState("");
